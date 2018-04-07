@@ -124,3 +124,11 @@ properties:
   enable_upgrade:
     description: "Enable upgrading Harbor"
     default: false
+  uaa_endpoint:
+    default: uaa.mydomain.org
+  uaa_clientid:
+    default: id
+  uaa_clientsecret:
+    default: secret
+  path_uaa_ca_cert:
+    default: /path/ca.pem
