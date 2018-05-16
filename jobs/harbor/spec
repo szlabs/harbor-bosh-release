@@ -10,6 +10,7 @@ templates:
   config/server.crt: config/server.crt
   config/server.key: config/server.key
   config/ca.crt: config/ca.crt
+  config/nginx.conf.erb: config/nginx.conf
 
 packages:
 - docker-compose
