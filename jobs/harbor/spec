@@ -133,3 +133,7 @@ properties:
     default: secret
   path_uaa_ca_cert:
     default: /path/ca.pem
+  registry_storage_provider_name:
+    default: filesystem
+  registry_storage_provider_config:
+    default: ""
