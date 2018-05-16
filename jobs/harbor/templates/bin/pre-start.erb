@@ -71,7 +71,7 @@ ${HARBOR_PACKAGE_DIR}/prepare ${PREPARE_OPTS}
 sudo mount /tmp -o remount,exec
 
 ################# added by marcus "copy nginx.conf file"
-cp ${HARBOR_JOB_DIR}/config/nginx.conf ${HARBOR_PACKAGE_DIR}/*/common/config/nginx/nginx.conf
+cp ${HARBOR_JOB_DIR}/config/nginx.conf ${HARBOR_PACKAGE_DIR}/common/config/nginx/nginx.conf
 #################
 
 log "Successfully done!"
