@@ -1,4 +1,4 @@
-worker_processes auto;
+orker_processes auto;
 
 events {
   worker_connections 1024;
@@ -18,7 +18,7 @@ http {
   }
 
   upstream ui {
-    server ui:80;
+    server ui:8080;
   }
 
   log_format timed_combined '$remote_addr - '
@@ -33,7 +33,7 @@ http {
   server {
     listen 443 ssl;
 #    server_name harbordomain.com;
-
+    server_tokens off;
     # SSL
     ssl_certificate /etc/nginx/cert/server.crt;
     ssl_certificate_key /etc/nginx/cert/server.key;
@@ -95,19 +95,19 @@ http {
       proxy_request_buffering off;
     }
 
-    location /service/notifications {
+        location /service/notifications {
       return 404;
     }
   }
-  server {
-    listen 80;
+    server {
+      listen 80;
+      #server_name harbordomain.com;
     # disable any limits to avoid HTTP 413 for large image uploads
     client_max_body_size 0;
 
     # required to avoid HTTP 411: see Issue #1486 (https://github.com/docker/docker/issues/1486)
     chunked_transfer_encoding on;
 
-      #server_name harbordomain.com;
     location / {
       proxy_pass http://ui/;
       proxy_set_header Host $http_host;
@@ -153,7 +153,7 @@ http {
       proxy_request_buffering off;
     }
 
-    location /service/notifications {
+        location /service/notifications {
       return 404;
     }
   }
