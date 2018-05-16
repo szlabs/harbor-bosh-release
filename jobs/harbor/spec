@@ -63,6 +63,8 @@ properties:
   db.user:
     description: "The user name of mysql database"
     default: "root"
+  redis_url:
+    default: "redis:6379"
   email.identity:
     description: "Identity left blank to act as username"
   email.server:
