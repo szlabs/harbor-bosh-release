@@ -105,6 +105,9 @@ properties:
   ldap.timeout:
     description: "Timeout (in seconds)  when connecting to an LDAP Server"
     default: 5
+  ldap.verify.cert:
+    description: "verify or not cert"
+    default: true
   ssl.cert:
     description: "The certificate for server"
   ssl.key:
