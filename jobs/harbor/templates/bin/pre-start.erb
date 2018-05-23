@@ -70,5 +70,9 @@ ${HARBOR_PACKAGE_DIR}/prepare ${PREPARE_OPTS}
 #Workaround to resolve the docker-compose libz issue
 sudo mount /tmp -o remount,exec
 
+################# added by marcus "copy nginx.conf file"
+cp ${HARBOR_JOB_DIR}/config/nginx.conf ${HARBOR_PACKAGE_DIR}/common/config/nginx/nginx.conf
+#################
+
 log "Successfully done!"
 exit 0

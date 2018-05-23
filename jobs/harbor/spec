@@ -10,6 +10,7 @@ templates:
   config/server.crt: config/server.crt
   config/server.key: config/server.key
   config/ca.crt: config/ca.crt
+  config/nginx.conf.erb: config/nginx.conf
 
 packages:
 - docker-compose
@@ -62,6 +63,8 @@ properties:
   db.user:
     description: "The user name of mysql database"
     default: "root"
+  redis_url:
+    default: "redis:6379"
   email.identity:
     description: "Identity left blank to act as username"
   email.server:
@@ -124,3 +127,15 @@ properties:
   enable_upgrade:
     description: "Enable upgrading Harbor"
     default: false
+  uaa_endpoint:
+    default: uaa.mydomain.org
+  uaa_clientid:
+    default: id
+  uaa_clientsecret:
+    default: secret
+  path_uaa_ca_cert:
+    default: /path/ca.pem
+  registry_storage_provider_name:
+    default: filesystem
+  registry_storage_provider_config:
+    default: ""
