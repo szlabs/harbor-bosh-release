@@ -1,5 +1,7 @@
 # Harbor BOSH release
 
+**NOTES: The harbor boshrelease project is already moved to https://github.com/vmware/harbor-boshrelease. That's the offical version now.**
+
 Project Harbor is an enterprise-class registry server that stores and distributes Docker images. Harbor extends the open source Docker Distribution by adding the functionalities usually required by an enterprise, such as security, identity and management. As an enterprise private registry, Harbor offers better performance and security. Having a registry closer to the build and run environment improves the image transfer efficiency. Harbor supports the setup of multiple registries and has images replicated between them. In addition, Harbor offers advanced security features, such as user management, access control and activity auditing.
 
 This repository uses the [Harbor](https://github.com/vmware/harbor) offline installation package to create the [BOSH](https://bosh.io) release which can be used to quickly deploy a standalone Harbor. The main idea of this Harbor BOSH release is running the Harbor components as containers on top of Docker and docker-compose. Please be noted here that **it's not a HA architecture of the Harbor deployed with this Harbor BOSH release.**
